@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Level Revision Planner</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>A-Level Revision Planner</h1>
+        <p>Smart revision planning tool for A-Level students</p>
+    </header>
+
+    <main>
+        <!-- Subject Cards Section -->
+        <section id="subjects">
+            <h2>Subjects</h2>
+            <div class="subject-cards">
+                <a href="https://www.physicsandmathstutor.com/physics-revision/" class="subject-card" target="_blank">
+                    <h3>Mathematics</h3>
+                </a>
+                <a href="https://www.physicsandmathstutor.com/physics-revision/" class="subject-card" target="_blank">
+                    <h3>Physics</h3>
+                </a>
+                <a href="https://www.physicsandmathstutor.com/chemistry-revision/" class="subject-card" target="_blank">
+                    <h3>Chemistry</h3>
+                </a>
+                <a href="https://www.savemyexams.com/subjects/further-maths/" class="subject-card" target="_blank">
+                    <h3>Further Mathematics</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Smart Revision Planner Section -->
+        <section id="planner">
+            <h2>Smart Revision Planner</h2>
+            <form id="planner-form">
+                <div class="form-group">
+                    <label for="subjects-list">Subjects:</label>
+                    <input type="text" id="subjects-list" placeholder="e.g. Mathematics, Physics">
+                </div>
+                <div class="form-group">
+                    <label for="papers-left">Papers left per subject:</label>
+                    <input type="text" id="papers-left" placeholder="e.g. 5, 3">
+                </div>
+                <div class="form-group">
+                    <label for="hours-left">Hours left until exam:</label>
+                    <input type="number" id="hours-left" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="reserve-days">Reserve last days for revision:</label>
+                    <input type="number" id="reserve-days" min="0" value="3">
+                </div>
+                <button type="submit">Generate Plan</button>
+            </form>
+            <div id="planner-stats">
+                <div id="progress-section">
+                    <h3>Overall Progress</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-handle"></div>
+                        </div>
+                        <div class="progress-text">0%</div>
+                    </div>
+                </div>
+                <div id="chart-section">
+                    <h3>Workload Distribution</h3>
+                    <div class="workload-chart"></div>
+                </div>
+            </div>
+            <div id="plan-result"></div>
+        </section>
+
+        <!-- Daily Check-in Section -->
+        <section id="check-in">
+            <h2>Daily Check-in</h2>
+            <form id="check-in-form">
+                <div class="form-group">
+                    <label for="today-subject">Today's Subject:</label>
+                    <input type="text" id="today-subject">
+                </div>
+                <div class="form-group">
+                    <label for="study-hours">Study Hours:</label>
+                    <input type="number" id="study-hours" min="0" step="0.5">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="check-in-result">
+                <h3>Today's Summary</h3>
+                <div id="summary-content"></div>
+                <div id="study-chart"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 A-Level Revision Planner</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

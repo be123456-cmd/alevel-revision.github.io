@@ -1,0 +1,364 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 0.5rem;
+}
+
+/* Subject Cards Styles */
+.subject-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.subject-card {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #f0f0f0;
+}
+
+.subject-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Planner Stats Styles */
+#planner-stats {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#progress-section,
+#chart-section {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#progress-section h3,
+#chart-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Progress Bar Styles */
+.progress-bar-container {
+    position: relative;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333;
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.progress-handle {
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: grab;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.progress-handle:active {
+    cursor: grabbing;
+}
+
+.progress-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+    pointer-events: none;
+}
+
+/* Workload Chart Styles */
+.workload-chart {
+    height: 200px;
+    position: relative;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.chart-column {
+    position: absolute;
+    bottom: 1rem;
+    width: 30px;
+    background-color: #333;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.5s ease;
+}
+
+.chart-column-label {
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #666;
+    white-space: nowrap;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+/* Plan Result Styles */
+#plan-result {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#plan-result h3 {
+    margin-bottom: 1rem;
+}
+
+.plan-day {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    border-left: 4px solid #333;
+}
+
+.plan-day h4 {
+    margin-bottom: 0.5rem;
+}
+
+.plan-day ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.plan-day li {
+    margin-bottom: 0.3rem;
+}
+
+/* Check-in Result Styles */
+#check-in-result {
+    margin-top: 2rem;
+}
+
+#summary-content {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+#study-chart {
+    height: 200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+}
+
+.chart-bar {
+    position: absolute;
+    bottom: 1rem;
+    width: 50px;
+    background-color: #333;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.5s ease;
+}
+
+.chart-label {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Units Container Styles */
+.units-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.unit-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.unit-card h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.unit-resources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.resource-link {
+    background-color: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.resource-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    .subject-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .unit-resources {
+        flex-direction: column;
+    }
+}
